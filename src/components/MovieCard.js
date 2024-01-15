@@ -17,14 +17,15 @@ const MovieCard = ({ movies }) => {
   }, [episode_id]);
   return (
     <div>
-      <div className="m-10 border min-h-80 max-h-60 border-slate-200 min-w-64 max-w-56 p-4">
+      
+      <div className="m-10 border  min-h-80 max-h-80 border-slate-100 min-w-64 max-w-56 p-4">
         <img className="w-full mt-px " src={StarWarImg} alt="movie_pic" />
         <div className="mt-4 ">
-          <h4 className="font-medium">Name: {title}</h4>
-          <h3>Director: {director}</h3>
-          <h4>Producer: {producer}</h4>
+          <h3 className="font-semibold ">{title}</h3>
+          <h5 className="text-sm">Director : {director}</h5>
+          <h5  className="text-sm">Producer :  {producer}</h5>
         </div>
-        <div className="mt-2">
+        <div className="mt-8 flex justify-end">
           <button
             onClick={() => {
               //dispatch action
@@ -47,9 +48,9 @@ const MovieCard = ({ movies }) => {
             }}
           >
             {isFavorite ? (
-              <img src={Favorited} alt="favourite" className="max-w-4 " />
+              <img src={Favorited} alt="favourite" className="max-w-5 " />
             ) : (
-              <img src={Favourite} alt="favourite" className="max-w-4 " />
+              <img src={Favourite} alt="favourite" className="max-w-5 " />
             )}
           </button>
         </div>
